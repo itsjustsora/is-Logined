@@ -36,7 +36,7 @@ public class MemberController {
         }
 
         try {
-            memberService.create(memberCreateForm.getName(),
+            memberService.create(memberCreateForm.getUsername(),
                     memberCreateForm.getEmail(), memberCreateForm.getPassword1());
         } catch (DataIntegrityViolationException e) {
             e.printStackTrace();
@@ -49,5 +49,10 @@ public class MemberController {
         }
 
         return "redirect:/";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login_form";
     }
 }

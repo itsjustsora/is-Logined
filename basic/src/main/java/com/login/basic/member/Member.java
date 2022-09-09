@@ -2,7 +2,6 @@ package com.login.basic.member;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -15,7 +14,7 @@ public class Member {
     private Long Id;
 
     @Column(unique = true)
-    private String name;
+    private String username;
 
     private String password;
 
