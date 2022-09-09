@@ -2,17 +2,17 @@ package com.login.basic.member;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
 @Entity
+@Getter @Setter
 public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
 
     @Column(unique = true)
     private String name;
@@ -21,5 +21,4 @@ public class Member {
 
     @Column(unique = true)
     private String email;
-
 }
